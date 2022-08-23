@@ -6,6 +6,8 @@ body {
 
 * {
   font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 #header {
@@ -22,11 +24,11 @@ body {
   background-color: #e3e6f6;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-}
-
-#header .logo {
-  width: 100px;
-  height: 80px;
+  z-index: 999;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 #header div #navbar {
@@ -61,7 +63,8 @@ body {
   color: #088178;
 }
 
-#header div #navbar a.active::after {
+#header div #navbar a.active::after,
+#header div #navbar a:hover::after {
   content: '';
   width: 30%;
   height: 2px;
@@ -69,5 +72,54 @@ body {
   position: absolute;
   bottom: -4px;
   left: 20px;
+}
+
+#hero {
+  background-image: url(../images/hero.png);
+  height: 90vh;
+  width: 100%;
+  background-position: top 25% right 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#hero h4 {
+  padding-bottom: 15px;
+  font-size: 20px;
+}
+
+#hero h1 {
+  color: #088178;
+}
+
+#hero h2,
+#hero h1 {
+  font-size: 70px;
+}
+
+#hero button {
+  background-image: url(../images/button.png);
+  background-color: transparent;
+  color: #1a1a1a;
+  border: none;
+  padding: 14px 80px 14px 65px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
 }
 /*# sourceMappingURL=index.css.map */
